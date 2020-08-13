@@ -13,4 +13,13 @@ const container = document.getElementById("app"); //Donde poner el elemento
 
 //ReactDOM.render pide un elemento no un componente por lo que se debe de poner un elemento con: </>
 
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(
+  <Badge
+    firtsName="Lenika"
+    lastName="Guerrero"
+    jobTitle="Ing. Sistemas Computacionales"
+    facebook="LenikaGuerrero"
+    avatarUrl="https://s.gravatar.com/avatar/12cc36990225cd2fcb6691034703adbc?s=80"
+  />,
+  container
+);

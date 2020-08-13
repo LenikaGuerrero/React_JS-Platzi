@@ -6,7 +6,14 @@ import confLogo from "../images/badge-header.svg";
 class Badge extends React.Component {
   //Render Define cual sera el resultado que aparecera en pantalla
   render() {
-    //Para los atributos de clases no se utiliza class sino className
+    //Para no poner muchos this.props.NOMBRE se dejan las constantes y se  hace lo siguiente:
+    //   const{
+    //       firtsName,
+    //       lastName,
+    //       jobTitle,
+    //       facebook,
+    //       avatarUrl
+    //   }=this.props;
     return (
       <div className="Badge">
         <div className="Badge__header">
@@ -15,18 +22,18 @@ class Badge extends React.Component {
         <div className="Badge__section-name">
           <img
             className="Badge__avatar"
-            src="https://www.gravatar.com/avatar?d=identicon"
+            src={this.props.avatarUrl}
             alt="Avatar"
           />
           <h1>
-            Lenika
+            {this.props.firtsName}
             <br />
-            Guerrero
+            {this.props.lastName}
           </h1>
         </div>
         <div className="Badge__section-info">
-          <h3>Ing. Sistemas Computacionales</h3>
-          <div>LenikaGuerrero</div>
+          <h3>{this.props.jobTitle}</h3>
+          <div>{this.props.facebook}</div>
         </div>
         <div className="Badge__footer">#platziConf</div>
       </div>
