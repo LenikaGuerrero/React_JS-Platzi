@@ -1,5 +1,9 @@
 import React from "react"; //Importar React = Create Element
 import ReactDOM from "react-dom"; //Importar ReactDOM = appendChild
+
+import "bootstrap/dist/css/bootstrap.css";
+
+import "./global.css";
 import Badge from "./components/Badge"; // Importar Componente
 
 const container = document.getElementById("app"); //Donde poner el elemento

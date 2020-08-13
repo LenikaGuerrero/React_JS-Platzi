@@ -1,30 +1,34 @@
 import React from "react";
+import "./styles/Badge.css";
 import confLogo from "../images/badge-header.svg";
 
 //Todos los componentes requieren de Render()
 class Badge extends React.Component {
   //Render Define cual sera el resultado que aparecera en pantalla
   render() {
-    //El source de las imágenes en React puede contener direcciones en la web o se le puede hacer una referencia directa importándola.
-    //Si se importa deben usarse llaves para que sea evaluado.
+    //Para los atributos de clases no se utiliza class sino className
     return (
-      <div>
-        <div>
+      <div className="Badge">
+        <div className="Badge__header">
           <img src={confLogo} alt="Logo de la Conferencia" />
         </div>
-        <div>
-          <img src="https://www.gravatar.com/avatar?d=identicon" alt="Avatar" />
+        <div className="Badge__section-name">
+          <img
+            className="Badge__avatar"
+            src="https://www.gravatar.com/avatar?d=identicon"
+            alt="Avatar"
+          />
           <h1>
             Lenika
             <br />
             Guerrero
           </h1>
         </div>
-        <div>
-          <p>Ing. Sistemas Computacionales</p>
-          <p>LenikaGuerrero</p>
+        <div className="Badge__section-info">
+          <h3>Ing. Sistemas Computacionales</h3>
+          <div>LenikaGuerrero</div>
         </div>
-        <div>#platziConf</div>
+        <div className="Badge__footer">#platziConf</div>
       </div>
     );
   }
