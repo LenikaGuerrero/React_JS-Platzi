@@ -1,10 +1,23 @@
 import React from "react";
+
+//setState = Escribe Estado
+//State = Lee estado
+
 class BadgeForm extends React.Component {
+  //Inicializar el Estado
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    jobTitle: "",
+    facebook: "",
+  };
+
   //Al Cambiar
   handleChange = (e) => {
-    console.log({
-      name: e.target.name, // Nombre del Input que causa el evento
-      value: e.target.value, //Valor que del Input
+    this.setState({
+      //Guarda la informacion del Estado
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -17,6 +30,7 @@ class BadgeForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("form was submit");
+    console.log(this.state);
   };
 
   render() {
@@ -25,15 +39,55 @@ class BadgeForm extends React.Component {
         <h1>New Attendant</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label>Firts Name</label>
+            <label>First Name</label>
             <input
               onChange={this.handleChange}
               className="form-control"
               type="text"
-              name="firtsName"
+              name="firstName"
+              value={this.state.firstName}
             ></input>
           </div>
-
+          <div className="form-group">
+            <label>Last Name</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+            ></input>
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="email"
+              name="email"
+              value={this.state.email}
+            ></input>
+          </div>
+          <div className="form-group">
+            <label>Job Title</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="jobTitle"
+              value={this.state.jobTitle}
+            ></input>
+          </div>
+          <div className="form-group">
+            <label>Facebook</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="facebook"
+              value={this.state.facebook}
+            ></input>
+          </div>
           <button onClick={this.handleClick} className="btn btn-primary">
             Save
           </button>

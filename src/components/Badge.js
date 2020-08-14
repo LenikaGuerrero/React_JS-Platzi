@@ -8,7 +8,7 @@ class Badge extends React.Component {
   render() {
     //Para no poner muchos this.props.NOMBRE se dejan las constantes y se  hace lo siguiente:
     //   const{
-    //       firtsName,
+    //       firstName,
     //       lastName,
     //       jobTitle,
     //       facebook,
@@ -26,7 +26,7 @@ class Badge extends React.Component {
             alt="Avatar"
           />
           <h1>
-            {this.props.firtsName}
+            {this.props.firstName}
             <br />
             {this.props.lastName}
           </h1>
