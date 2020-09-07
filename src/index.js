@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "./global.css";
 import BadgeNew from "./pages/BadgeNew"; // Importar Componente
+import Badges from "./pages/Badges";
 
 const container = document.getElementById("app"); //Donde poner el elemento
 
@@ -13,4 +14,4 @@ const container = document.getElementById("app"); //Donde poner el elemento
 
 //ReactDOM.render pide un elemento no un componente por lo que se debe de poner un elemento con: </>
 
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<Badges />, container);

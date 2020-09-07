@@ -1,0 +1,29 @@
+.BadgesListItem {
+    background: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.BadgesListItem__avatar {
+    border-radius: 50%;
+    background: #a3a3a3;
+    margin-right: 0.5rem;
+    width: 80px;
+    height: 80px;
+}
+
+.Twitter__name {
+    color: #1da1f2;
+}
+
+.Twitter__logo {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../images/Twitter_Logo_Blue.svg');
+    margin-right: 0.3rem;
+    vertical-align: middle;
+}
