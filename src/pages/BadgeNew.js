@@ -7,6 +7,31 @@ import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 
 class BadgeNew extends React.Component {
+  state = {
+    form: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      jobTitle: "",
+      facebook: "",
+    },
+  };
+
+  //Cambio de BadgeForm a toda la pagina
+  //Al Cambiar
+  handleChange = (e) => {
+    // const nextForm = this.state.form; //Siguiente Estado del Formulario (copia el estado)
+    // nextForm[e.target.name] = e.target.value;
+
+    this.setState({
+      //Sobreescribe la informacion
+      form: {
+        ...this.state.form, //Deja los valores que tenia el formulario
+        [e.target.name]: e.target.value, //Sobreescribe y Guarda la informacion del Estado
+      },
+    });
+  };
+
   render() {
     return (
       <div>
@@ -18,15 +43,19 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName="Lenika"
-                lastName="Guerrero"
-                jobTitle="Ing. Sistemas Computacionales"
-                facebook="LenikaGuerrero"
+                firstName={this.state.form.firstName}
+                lastName={this.state.form.lastName}
+                jobTitle={this.state.form.jobTitle}
+                facebook={this.state.form.facebook}
+                email={this.state.form.email}
                 avatarUrl="https://s.gravatar.com/avatar/12cc36990225cd2fcb6691034703adbc?s=80"
               />
             </div>
             <div className="col-6">
-              <BadgeForm />
+              <BadgeForm
+                onChange={this.handleChange}
+                formValues={this.state.form}
+              />
             </div>
           </div>
         </div>
