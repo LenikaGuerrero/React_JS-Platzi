@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./styles/BadgesList.css";
 
 class BadgesList extends React.Component {
@@ -10,7 +10,11 @@ class BadgesList extends React.Component {
             //key:ideintificador unico cuando se enlistan varios elementos
             //ayuda a determinar cuando el elemento se vuelve a renderizar y ver si se mantuvo en la lista o cambio
             <li key={badge.id} className="BadgesListItem">
-              <img className="BadgesListItem__avatar" src={badge.avatarUrl} />
+              <img
+                className="BadgesListItem__avatar"
+                src={badge.avatarUrl}
+                alt="Avatar"
+              />
               <div>
                 <div>
                   <strong>
