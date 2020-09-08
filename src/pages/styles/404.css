@@ -1,0 +1,27 @@
+.NotFound {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 60px);
+    background: url('../../images/stars.svg'), #1B1B25;
+    background-repeat: repeat;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.NotFound__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.NotFound>div>div>div.NotFound__col.col-12.col-md-4 {
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .NotFound__col {
+        align-items: flex-start;
+    }
+}
