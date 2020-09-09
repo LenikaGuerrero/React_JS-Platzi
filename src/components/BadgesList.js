@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/BadgesList.css";
 import { Link } from "react-router-dom";
+import Gravatar from "./Gravatar";
 
 class BadgesList extends React.Component {
   render() {
@@ -22,9 +23,9 @@ class BadgesList extends React.Component {
             //key:ideintificador unico cuando se enlistan varios elementos
             //ayuda a determinar cuando el elemento se vuelve a renderizar y ver si se mantuvo en la lista o cambio
             <li key={badge.id} className="BadgesListItem">
-              <img
+              <Gravatar
                 className="BadgesListItem__avatar"
-                src={badge.avatarUrl}
+                email={badge.email}
                 alt="Avatar"
               />
               <div>
